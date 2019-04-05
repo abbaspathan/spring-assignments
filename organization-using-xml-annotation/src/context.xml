@@ -13,14 +13,38 @@
 		<constructor-arg index = "1" value = "capgemini"/>
 		<constructor-arg index = "2" value = "12000"/>
 		<constructor-arg index = "3" ref = "address"/>
+		<constructor-arg index = "4">  
+			<list>  
+				<value>John Doe</value>  
+				<value>Grant</value>  
+				<value>Taylor</value>  
+			</list>  
+		</constructor-arg>  
+		<constructor-arg index = "5">  
+			<set>  
+				<value>pune</value>  
+				<value>chennai</value>  
+				<value>mumbai</value>  
+			</set>  
+		</constructor-arg> 
+		<constructor-arg index = "6">  
+			<map>  
+				<entry key="1" value="Roni"/>
+				<entry key="2" value="Riya"/>
+				<entry key="3" value="Ram"/>
+			</map>  
+		</constructor-arg>
+		<constructor-arg index = "7" ref="myProperties1"/>
+		<constructor-arg index = "8" ref="myProperties2"/>
 		
 	</bean>
+
+	<util:properties id="myProperties1" location="ipAddress.properties"/>
+	<util:properties id="myProperties2" location="database.properties"/>
 
 	<bean id = "address" class = "com.capgemini.spring.model.Address">
 		<constructor-arg index = "0" value = "Pune"/>
 		<constructor-arg index = "1" value = "Maharashtra"/>
 	</bean>
 
-	<bean >
-	</bean>
 </beans>

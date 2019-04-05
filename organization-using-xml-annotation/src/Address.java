@@ -21,5 +21,9 @@ public class Address{
 	public void setStateName(String stateName) {
 		this.stateName = stateName;
 	}
+
+	public String toString() {
+		return "Address [cityName=" + cityName + ", stateName=" + stateName + "]";
+	}
 	
 }

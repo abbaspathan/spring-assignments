@@ -9,5 +9,7 @@ public class OrganizationMain{
 		
 		ApplicationContext context=new ClassPathXmlApplicationContext("context.xml");
 		Organization org=(Organization)context.getBean("organization");
+		System.out.println();
+		System.out.println(org);
 	}
 }

@@ -12,19 +12,19 @@ public class Organization {
 	private Properties ipAddresses;
 	private Properties databaseDetails;
 	
-	public Organization(int organizationId, String organizationName, double marketPrice, Address address)/*,
-			List<String> directors, Set<String> branches, Map<String,String> branchWiseHead, Properties ipAddresses,
-			Properties databaseDetails)*/ {
+	public Organization(int organizationId, String organizationName, double marketPrice, Address address,List<String> directors,Set<String> branches,
+Map<String,String> branchWiseHead,Properties ipAddresses,Properties databaseDetails) {
 		
 		this.organizationId = organizationId;
 		this.organizationName = organizationName;
 		this.marketPrice = marketPrice;
 		this.address = address;
-		/*this.directors = directors;
-		this.branches = branches;
-		this.branchWiseHead = branchWiseHead;
-		this.ipAddresses = ipAddresses;
-		this.databaseDetails = databaseDetails;*/
+		this.directors=directors;
+		this.branches=branches;
+		this.branchWiseHead=branchWiseHead;
+		this.ipAddresses=ipAddresses;
+		this.databaseDetails=databaseDetails;
+
 	}
 
 	public int getOrganizationId() {
@@ -79,7 +79,7 @@ public class Organization {
 		return branchWiseHead;
 	}
 
-	public void setBranchWiseHead(Map<String, String> branchWiseHead) {
+	public void setBranchWiseHead(Map<String,String> branchWiseHead) {
 		this.branchWiseHead = branchWiseHead;
 	}
 
@@ -98,6 +98,12 @@ public class Organization {
 	public void setDatabaseDetails(Properties databaseDetails) {
 		this.databaseDetails = databaseDetails;
 	}
-	
+
+	public String toString() {
+		return "Organization [organizationId=" + organizationId + ", organizationName=" + organizationName
+				+ ", marketPrice=" + marketPrice + ", address=" + address + ", directors=" + directors + ", branches="
+				+ branches + ", branchWiseHead=" + branchWiseHead + ", ipAddresses=" + ipAddresses
+				+ ", databaseDetails=" + databaseDetails + "]";
+	}
 	
 }
