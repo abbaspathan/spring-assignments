@@ -67,6 +67,7 @@ public class AppConfig{
 	@Bean
 	public Organization getOrganization(){
 		Organization org=new Organization();
+
 		org.setOrganizationId(1011);
 		org.setOrganizationName("Capgemini");
 		org.setMarketPrice(34567);
