@@ -4,13 +4,14 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.List;
-
+import com.capgemini.bankapp.config.*;
 import com.capgemini.bankapp.exception.AccountNotFoundException;
 import com.capgemini.bankapp.exception.LowBalanceException;
 import com.capgemini.bankapp.service.BankAccountService;
 import com.capgemini.bankapp.service.impl.BankAccountServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class BankAccountClient {
 
@@ -18,7 +19,7 @@ public class BankAccountClient {
 	public static void main(String[] args) {
 
 	ApplicationContext context=new AnnotationConfigApplicationContext(BankAppConfig.class);
-	BankAccountService accountService=(BankAccountService)context.getBean("bankAccountServiceImpl");
+	BankAccountService accountService=context.getBean(BankAccountServiceImpl.class);
 
 		int choice;
 		String accountHolderName;
