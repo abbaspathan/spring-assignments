@@ -23,6 +23,7 @@
 	<bean id = "bankAccountServiceImpl" class = "com.capgemini.bankapp.service.impl.BankAccountServiceImpl">
 		<constructor-arg ref="bankAccountDaoImpl"/>
 	</bean>
-
+	
+	<bean id = "bankAccount" class = "com.capgemini.bankapp.client.BankAccount"/>
 
 </beans>

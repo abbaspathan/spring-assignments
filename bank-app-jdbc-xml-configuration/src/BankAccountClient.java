@@ -47,7 +47,10 @@ public class BankAccountClient {
 					accountType = reader.readLine();
 					System.out.println("Enter account Initial Balance:");
 					accountBalance = Double.parseDouble(reader.readLine());
-					BankAccount account = new BankAccount(accountHolderName, accountType, accountBalance);
+					BankAccount account =(BankAccount)context.getBean("bankAccount");
+					account.setAccountHolderName(accountHolderName);
+					account.setAccountType(accountType);
+					account.setAccountBalance(accountBalance);
 					if (accountService.addNewBankAccount(account)) {
 						System.out.println("Account created successfully");
 					} else {
