@@ -43,7 +43,7 @@ public class BankAppConfig{
 
 	@Bean
 	public BankAccountServiceImpl getBankAccountServiceImpl(){
-		BankAccountServiceImpl bankAccountDaoImpl=new BankAccountServiceImpl(getBankAccountDaoImpl());
-		return bankAccountDaoImpl;
+		BankAccountServiceImpl bankAccountServiceImpl=new BankAccountServiceImpl(getBankAccountDaoImpl());
+		return bankAccountServiceImpl;
 	}
 }
